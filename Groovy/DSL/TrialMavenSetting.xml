@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+	<localRepository>D:\Data\cfhu_maven_cache</localRepository>
+	<servers>
+		<server>
+			<id>BNPPF_Tooling_Factory</id>
+			<username>sdlc-deployment</username>
+			<password>IL0V3P0C</password>
+		</server>
+        <server>
+			<id>BNPPF_Tooling_Factory_Snapshot</id>
+			<username>sdlc-deployment</username>
+			<password>IL0V3P0C</password>
+		</server>
+        <server>
+			<id>BNPPF_Local_Applications_PROD</id>
+			<username>sdlc-deployment</username>
+			<password>IL0V3P0C</password>
+		</server>
+      	<server>
+			<id>BNPPF_Local_Applications_Snapshots</id>
+			<username>sdlc-deployment</username>
+			<password>IL0V3P0C</password>
+		</server>
+        <server>
+			<id>BNPPF_Local_Applications_Releases</id>
+			<username>sdlc-deployment</username>
+			<password>IL0V3P0C</password>
+        </server>
+		<!--server>
+			<id>sldc-tests-snapshots</id>
+			<username>sdlc-deployment</username>
+			<password>IL0V3P0C</password>
+		</server>
+		<server>
+			<id>sldc-tests-releases</id>
+			<username>sdlc-deployment</username>
+			<password>IL0V3P0C</password>
+		</server>
+		<server>
+			<id>sdlc-tests-intermediaryreleases</id>
+			<username>sdlc-deployment</username>
+			<password>IL0V3P0C</password>
+		</server>
+		<server>
+			<id>sldc-tests-nightly</id>
+			<username>sdlc-deployment</username>
+			<password>IL0V3P0C</password>
+		</server-->
+		<server>
+			<id>staging</id>
+			<username>sdlc-deployment</username>
+			<password>IL0V3P0C</password>
+		</server>
+	</servers>
+
+	<mirrors>
+ 		<mirror>	
+			<id>bnppf-secured-qa</id>
+			<mirrorOf>*</mirrorOf>			
+			<url>http://i-net1102e-qa:8081/nexus/content/groups/BNPPF_Local_Assets_Public/</url>
+          <!--url>http://i-net1102e-qa:8081/nexus/content/groups/SDLC-map-old-new/</url-->
+		</mirror>
+    </mirrors>
+
+	<profiles>
+		<profile>
+			<id>nexus-qa-profile</id>
+			<repositories>
+				<repository>
+					<id>central</id>
+					<url>http://central</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>central</id>
+					<url>http://central</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>			
+	</profiles>
+
+	<activeProfiles>
+		<activeProfile>nexus-qa-profile</activeProfile>		
+	</activeProfiles>
+
+</settings>
